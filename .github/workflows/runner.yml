@@ -22,7 +22,7 @@ jobs:
           pip install --upgrade pip
 
       - name: 🚀 Run latency scanner script
-        run: tester.py
+        run: python tester.py
 
       - name: ✅ Commit and push updated results
         run: |
