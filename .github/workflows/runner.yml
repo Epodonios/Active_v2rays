@@ -1,8 +1,8 @@
 name: tester run
 on:
   schedule:
-    - cron: '0 */2 * * *'  # 
-  workflow_dispatch:       # 
+    - cron: '0 */2 * * *'  # هر 2 ساعت
+  workflow_dispatch:
 
 jobs:
   scan:
@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: 📥 Checkout current repo
         uses: actions/checkout@v3
+
+      - name: 🧾 Show directory contents
+        run: ls -la
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v4
